@@ -16,6 +16,8 @@ entity Books : managed,cuid {
 
    @title: 'Currency'
    currency: Currency;
+   @title : 'Criticality'
+   criticality : Integer;
 
    authors: Association to one Authors;
 }

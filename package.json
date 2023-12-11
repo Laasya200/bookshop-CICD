@@ -8,10 +8,13 @@
   "dependencies": {
     "@sap/cds": "^7",
     "express": "^4",
-    "passport": "^0.7.0"
+    "passport": "^0",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7",
     "@sap/ux-specification": "^1.120.0"
   },
   "scripts": {
@@ -23,5 +26,13 @@
   "sapux": [
     "app/booksapp",
     "app/bookapp"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      }
+    }
+  }
 }
